@@ -1,11 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    './public/index.html'
+    './pages/**/*.{js,jsx}',
+    './components/**/*.{js,jsx}',
+    './app/**/*.{js,jsx}',
+    './src/**/*.{js,jsx}',
   ],
-  darkMode: false,
+  prefix: "",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       colors: {
         primary: '#11071F',
@@ -21,8 +31,21 @@ module.exports = {
         light: '#FFFFFF',
         dark: '#343a40',
         muted: '#6c757d',
-      }
+      },
+      animation: {
+        meteor: "meteor 5s linear infinite",
+      },
+      keyframes: {
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: 1 },
+          "70%": { opacity: 1 },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: 0,
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 }
