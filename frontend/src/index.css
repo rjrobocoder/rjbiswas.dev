@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+
+@import url("./fonts.css");
+
 body {
-    @apply bg-primary;
+  @apply bg-primary;
+  font-family: "Preahvihear", sans-serif;
 }
