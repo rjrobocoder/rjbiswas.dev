@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Meteors from "./magicui/Meteors";
+import { DockNav } from "./DockNav";
 
 const Layout = ({ children }) => {
   return (
@@ -10,6 +11,9 @@ const Layout = ({ children }) => {
       </div>
       <Header />
       <main>{children}</main>
+      <nav className="w-full fixed bottom-[60px] z-20">
+        <DockNav />
+      </nav>
     </div>
   );
 };

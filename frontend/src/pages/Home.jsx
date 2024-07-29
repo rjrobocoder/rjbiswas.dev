@@ -6,6 +6,7 @@ import WorkExperienceSection from "../components/homepage/WorkExperienceSection"
 import ProjectsSection from "../components/homepage/ProjectsSection";
 import ContactSection from "../components/homepage/ContactSection";
 import SkillSection from "../components/homepage/SkillSection";
+import { DockNav } from "../components/DockNav";
 
 const Home = () => {
   return (
